@@ -1,0 +1,32 @@
+{
+  "name": "svelte-svelte",
+  "displayName": "Svelte Template",
+  "version": "1.0.0",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^2.0.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "sirv-cli": "^0.3.1",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "@2dimensions/flare-js": "^1.0.0",
+    "canvas-kit": "^0.1.8",
+    "gl-matrix": "^3.3.0",
+    "svelte": "^3.23.2",
+    "svelte-routing": "^1.4.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "autobuild": "rollup -c -w",
+    "dev": "rollup -c -w",
+    "start": "sirv www"
+  },
+  "keywords": [],
+  "description": ""
+}
