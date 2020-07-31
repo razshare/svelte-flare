@@ -46,7 +46,7 @@ export default {
 				css.write('www/build/bundle.css');
 			}
 		}),
-    css({output:'www/build/extra.css'}),
+    	css({output:'www/build/extra.css'}),
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration -
