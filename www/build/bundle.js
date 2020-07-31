@@ -3649,7 +3649,7 @@ var app = (function () {
 
     const { console: console_1 } = globals;
 
-    // (13:0) <ComputerAnimation>
+    // (12:0) <ComputerAnimation>
     function create_default_slot$2(ctx) {
     	let multioptionbutton;
     	let current;
@@ -3657,7 +3657,7 @@ var app = (function () {
     	multioptionbutton = new MultiOptionButton({
     			props: {
     				style: "position:absolute;left: 0;top:0;",
-    				onclick: /*func*/ ctx[3]
+    				onclick: /*func*/ ctx[2]
     			},
     			$$inline: true
     		});
@@ -3689,7 +3689,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(13:0) <ComputerAnimation>",
+    		source: "(12:0) <ComputerAnimation>",
     		ctx
     	});
 
@@ -3706,7 +3706,7 @@ var app = (function () {
     	let current;
 
     	function toggle_value_binding(value) {
-    		/*toggle_value_binding*/ ctx[2].call(null, value);
+    		/*toggle_value_binding*/ ctx[1].call(null, value);
     	}
 
     	let toggle_props = {};
@@ -3758,7 +3758,7 @@ var app = (function () {
     			toggle.$set(toggle_changes);
     			const computeranimation_changes = {};
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope*/ 8) {
     				computeranimation_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3798,9 +3798,8 @@ var app = (function () {
     }
 
     function instance$7($$self, $$props, $$invalidate) {
-    	let { style } = $$props;
     	let value = false;
-    	const writable_props = ["style"];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<HomePage> was created with unknown prop '${key}'`);
@@ -3818,22 +3817,16 @@ var app = (function () {
     		console.log(key, " clicked!");
     	};
 
-    	$$self.$set = $$props => {
-    		if ("style" in $$props) $$invalidate(1, style = $$props.style);
-    	};
-
     	$$self.$capture_state = () => ({
     		Toggle,
     		CheckAnimation,
     		HomeAnimation: ComputerAnimation,
     		ComputerAnimation,
     		MultiOptionButton,
-    		style,
     		value
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("style" in $$props) $$invalidate(1, style = $$props.style);
     		if ("value" in $$props) $$invalidate(0, value = $$props.value);
     	};
 
@@ -3847,13 +3840,13 @@ var app = (function () {
     		}
     	};
 
-    	return [value, style, toggle_value_binding, func];
+    	return [value, toggle_value_binding, func];
     }
 
     class HomePage extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, { style: 1 });
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -3861,21 +3854,6 @@ var app = (function () {
     			options,
     			id: create_fragment$7.name
     		});
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-
-    		if (/*style*/ ctx[1] === undefined && !("style" in props)) {
-    			console_1.warn("<HomePage> was created without expected prop 'style'");
-    		}
-    	}
-
-    	get style() {
-    		throw new Error("<HomePage>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set style(value) {
-    		throw new Error("<HomePage>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
