@@ -44,7 +44,7 @@ function onanimation(previous,current){
 $:opened = animation !== "deactivate";
 </script>
 
-<Flare style="position:relative;z-index:0;background:rgba(0,0,0,0.1);{style?" "+style:""}" filename="./assets/MultiOptionButton.flr" width=300 {animation} {onanimation}>
+<Flare style="pointer-events:none;position:relative;z-index:0;background:rgba(0,0,0,0.1);{style?" "+style:""}" filename="./assets/MultiOptionButton.flr" width=300 {animation} {onanimation}>
     <div class="floating">
         <div class="floating-wrapper">
             <div on:click={main} class="main-btn"></div>
@@ -75,6 +75,7 @@ $:opened = animation !== "deactivate";
         height: 100%;
     }
     .main-btn{
+        pointer-events:all;
         position: absolute;
         width: 90px;
         height: 90px;
@@ -87,6 +88,7 @@ $:opened = animation !== "deactivate";
     }
 
     .camera-btn{
+        pointer-events:all;
         position: absolute;
         width: 70px;
         height: 70px;
@@ -99,6 +101,7 @@ $:opened = animation !== "deactivate";
     }
 
     .pulse-btn{
+        pointer-events:all;
         position: absolute;
         width: 70px;
         height: 70px;
@@ -111,6 +114,7 @@ $:opened = animation !== "deactivate";
     }
 
     .image-btn{
+        pointer-events:all;
         position: absolute;
         width: 70px;
         height: 70px;
